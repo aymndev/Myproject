@@ -9,4 +9,18 @@
 }
 #end{
     padding-top: 13rem;
+    display: flex;
+    
+    
+}
+#contact{
+   
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap:3.5rem;
+   
+
+    
+    margin-top:95px ;
 }
