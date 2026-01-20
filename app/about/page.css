@@ -13,10 +13,29 @@
     
     
 }
+button{
+    padding: 9px;
+    font-size:20px;
+    background-color: #F54927;
+    border: none;
+    color:white;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    font-family: Arial,  "Times", "Times New Roman", "Georgia", serif;
+
+
+}
+button:hover{
+    background-color: #F50000;
+    
+    background:var(--accent-dark);
+    transform: translateY(-4px);
+    
+}
 h2{
     font-size:40px;
     color:#F54927;
-    font-family: Arial,  "Times", "Times New Roman", "Georgia", serif;;
+    font-family: Arial,  "Times", "Times New Roman", "Georgia", serif;
 }
 p{
     font-size:26px;
@@ -28,4 +47,153 @@ p{
     padding-left: 150px;
     padding-top:15px ;
     color: black;
+}
+
+
+
+
+
+body {
+  background: #fff;
+  font-family: "Comfortaa", sans-serif;
+  position: relative;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.main-content {
+  text-align: center;
+  text-transform: uppercase;
+  scroll-snap-type: y mandatory;
+  position: relative;
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+.hover,
+.word,
+h1 {
+  cursor: pointer;
+}
+
+h1 {
+  position: relative;
+  color: #fff;
+  font: 900 60px Montserrat;
+  text-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.concept {
+  position: relative;
+  padding: 5em;
+  height: 100vh;
+  overflow: hidden;
+  scroll-snap-align: center;
+}
+
+.concept:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: radial-gradient(rgba(0, 0, 0, 0.3), transparent);
+  opacity: 0;
+  transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.concept:hover:before {
+  opacity: 0.5;
+}
+
+/* ----------------- Concept One ----------------- */
+
+.concept-one {
+  display: grid;
+  grid: repeat(3, 1fr)/ repeat(3, 1fr);
+  padding: 8em;
+  background: url("https://meowlivia.s3.us-east-2.amazonaws.com/codepen/background/desert.jpg")
+    no-repeat center center / cover;
+}
+
+.concept-one h1 {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 50%;
+  margin-top: -30px;
+  transition: 0.5s ease;
+  z-index: 0;
+  letter-spacing: 25px;
+}
+
+.concept-one .hover {
+  z-index: 1;
+}
+
+.concept-one .hover-1:hover ~ h1 {
+  left: 30px;
+  margin-top: -10px;
+}
+.concept-one .hover-2:hover ~ h1 {
+  margin-top: -10px;
+}
+.concept-one .hover-3:hover ~ h1 {
+  right: 30px;
+  margin-top: -10px;
+}
+.concept-one .hover-4:hover ~ h1 {
+  left: 30px;
+}
+.concept-one .hover-6:hover ~ h1 {
+  right: 30px;
+}
+.concept-one .hover-7:hover ~ h1 {
+  left: 30px;
+  margin-top: -50px;
+}
+.concept-one .hover-8:hover ~ h1 {
+  margin-top: -50px;
+}
+.concept-one .hover-9:hover ~ h1 {
+  right: 30px;
+  margin-top: -50px;
+}
+
+/* ----------------- Concept Two ----------------- */
+
+.concept-two {
+    display: grid;
+    grid: 100% / repeat(7, 1fr);
+    padding: 5em 15em;
+    background: url("https://meowlivia.s3.us-east-2.amazonaws.com/codepen/background/forest.jpg")
+    center center / cover;
+}
+
+
+
+.concept-two .hover {
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+
+.concept-two h1 {
+  color: transparent;
+  text-align: 0 1px 1px;
+  -webkit-text-stroke: 2px #fff;
+  text-shadow: none;
+  transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.concept-two .hover:hover h1 {
+  transform: scale(1.5);
+  color: #fff;
+  -webkit-text-stroke: 2px transparent;
+  text-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
