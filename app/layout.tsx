@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { Geist } from "next/font/google";
-import ThemeToggle from "../components/ThemeToggle";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 import "./layout.css";
 
@@ -9,36 +9,18 @@ const geist = Geist({ subsets: ["latin"], weight: "400" });
 
 export const metadata: Metadata = {
   title: "My Website",
-  description: "This is my Next.js site",
+  description: "Modern, responsive Next.js site",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={geist.className}>
       <body>
-        <div id="container">
-          <div id="my-title">
-            <h1 className="">Welcome</h1>
-          </div>
+        <Header />
 
-          <div id="main-menu">
-            <nav>
-              <ul>
-                <li><Link href="/">Home</Link></li>
-                <li><Link href="/about">About</Link></li>
-                <li><Link href="/service">Service</Link></li>
-              </ul>
-            </nav>
-          </div>
+        <main className="min-h-[60vh] px-6 py-8">{children}</main>
 
-          <div id="login" className="flex items-center gap-4">
-            <ThemeToggle />
-            <Link className="btn" href="/login">Log in</Link>
-          </div>
-        </div>
-
-        {/* Pages content */}
-        {children}
+        <Footer />
       </body>
     </html>
   );

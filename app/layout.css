@@ -69,9 +69,20 @@ input{width:100%;padding:8px;margin-top:6px}
     --bg: #ffffff;
     --panel: #f4f4f5;
     --muted: #333333;
-    --accent: #0ea5e9; /* blue-ish */
-    --accent-dark: #0284c7;
+    /* Use the same brand accent in light mode for consistency (avoid bright blue) */
+    --accent: #F54927;
+    --accent-dark: #c43a1f;
 }
+
+/* Header refinements for the new Header component */
+header img{display:block;border-radius:6px}
+header a{color:inherit}
+header nav a{padding:6px 8px;border-radius:6px}
+header nav a:hover{background:rgba(255,255,255,0.02)}
+
+/* Make sure the login "btn" class used elsewhere is neutral */
+.btn{background:transparent;color:var(--muted);border:1px solid rgba(255,255,255,0.06);padding:8px 12px;border-radius:8px}
+.btn:hover{background:rgba(255,255,255,0.02)}
 
 /* Theme toggle button */
 .theme-toggle{

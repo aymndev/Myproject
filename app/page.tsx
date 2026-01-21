@@ -11,19 +11,14 @@ export default function Home() {
         <Link
           id="my_button"
           href="/service"
-          className=" no-underline text-[25px] hover:scale-90 transition-transform duration-300 transform font-bold bg-blue-500 text-black px-6 py-3 rounded-lg inline-block text-center"
+          className=" no-underline text-[25px] hover:scale-95 transition-transform duration-300 transform font-bold bg-slate-800 text-white px-6 py-3 rounded-lg inline-block text-center"
         >
           Tell me more
         </Link>
       </div>
 
       <div id="end" className="flex flex-col items-center mt-8 gap-4">
-        <img
-          src="/modern-abstract-fire-swirl-logo-design_1262165-3572-removebg-preview.png"
-          alt="Logo"
-          width={150}
-          height={150}
-        />
+
 
         <div id="contact" className="flex gap-4">
           <a href="https://www.facebook.com" target="_blank" rel="noreferrer">
